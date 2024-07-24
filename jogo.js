@@ -24,4 +24,22 @@ const criar = () => {
     } else {
         console.log("Dados inválidos");
     }
+};
+
+const listar = () => {
+    if (jogos.length == 0) {
+        console.log("Nenhum jogo encontrado");
+    } else {
+        jogos.forEach((jogo, indice) => {
+            console.log(`
+            ${indice+1}.
+            Nome: ${jogo.nome}
+            Ano de lançamento: ${jogo.anoLancamento}
+            Duração: ${jogo.duracao}
+            Preço: ${jogo.preco}
+            Estúdio: ${jogo.estudio}
+            Sequência: ${jogo.sequencia}
+            `);
+        });
+    }
 }
